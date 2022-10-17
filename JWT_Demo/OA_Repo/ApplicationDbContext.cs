@@ -13,10 +13,13 @@ namespace OA_Repo
 
         public DbSet<Users> Users { get; set; } 
 
+        public DbSet<LoginModel> LoginModels { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             new UserMap(modelBuilder.Entity<Users>());
+            new LoginModelMap(modelBuilder.Entity<LoginModel>());
         }
     }
 }
