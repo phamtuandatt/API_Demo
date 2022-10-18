@@ -14,15 +14,6 @@ namespace OA_Service
     {
         public string GenerateAccessToken(IEnumerable<Claim> claims)
         {
-            //var sercurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-            //var credentials = new SigningCredentials(sercurityKey, SecurityAlgorithms.HmacSha256);
-            //var token = new JwtSecurityToken(_config["Jwt:Issuer"],
-            //    _config["Jwt:Audience"],
-            //    expires: DateTime.Now.AddMinutes(15),
-            //    signingCredentials: credentials);
-
-            //return new JwtSecurityTokenHandler().WriteToken(token);
-
             var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"));
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
             var tokeOptions = new JwtSecurityToken(
