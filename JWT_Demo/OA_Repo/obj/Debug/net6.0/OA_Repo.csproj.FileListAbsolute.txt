@@ -1,0 +1,17 @@
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\bin\Debug\net6.0\OA_Repo.deps.json
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\bin\Debug\net6.0\OA_Repo.runtimeconfig.json
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\bin\Debug\net6.0\OA_Repo.dll
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\bin\Debug\net6.0\OA_Repo.pdb
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\bin\Debug\net6.0\OA_Data.dll
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\bin\Debug\net6.0\OA_Data.pdb
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\OA_Repo.csproj.AssemblyReference.cache
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\OA_Repo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\OA_Repo.AssemblyInfoInputs.cache
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\OA_Repo.AssemblyInfo.cs
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\OA_Repo.csproj.CoreCompileInputs.cache
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\OA_Repo.csproj.CopyComplete
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\OA_Repo.dll
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\refint\OA_Repo.dll
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\OA_Repo.pdb
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\OA_Repo.genruntimeconfig.cache
+D:\Demo\API_Demo\JWT_Demo\OA_Repo\obj\Debug\net6.0\ref\OA_Repo.dll

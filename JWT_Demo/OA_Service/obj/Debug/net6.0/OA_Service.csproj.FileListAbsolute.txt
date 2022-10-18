@@ -1,0 +1,17 @@
+D:\Demo\API_Demo\JWT_Demo\OA_Service\bin\Debug\net6.0\OA_Service.deps.json
+D:\Demo\API_Demo\JWT_Demo\OA_Service\bin\Debug\net6.0\OA_Service.dll
+D:\Demo\API_Demo\JWT_Demo\OA_Service\bin\Debug\net6.0\OA_Service.pdb
+D:\Demo\API_Demo\JWT_Demo\OA_Service\bin\Debug\net6.0\OA_Data.dll
+D:\Demo\API_Demo\JWT_Demo\OA_Service\bin\Debug\net6.0\OA_Repo.dll
+D:\Demo\API_Demo\JWT_Demo\OA_Service\bin\Debug\net6.0\OA_Data.pdb
+D:\Demo\API_Demo\JWT_Demo\OA_Service\bin\Debug\net6.0\OA_Repo.pdb
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\OA_Service.csproj.AssemblyReference.cache
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\OA_Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\OA_Service.AssemblyInfoInputs.cache
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\OA_Service.AssemblyInfo.cs
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\OA_Service.csproj.CoreCompileInputs.cache
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\OA_Service.csproj.CopyComplete
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\OA_Service.dll
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\refint\OA_Service.dll
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\OA_Service.pdb
+D:\Demo\API_Demo\JWT_Demo\OA_Service\obj\Debug\net6.0\ref\OA_Service.dll
