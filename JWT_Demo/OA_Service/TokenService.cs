@@ -1,4 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
+using OA_Data;
+using OA_Repo;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -20,7 +22,7 @@ namespace OA_Service
                 issuer: "https://localhost:7057/",
                 audience: "https://localhost:7057/",
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(5),
+                expires: DateTime.Now.AddMinutes(1),
                 signingCredentials: signinCredentials
             );
             var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);

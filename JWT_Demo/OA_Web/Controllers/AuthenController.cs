@@ -9,43 +9,50 @@ namespace OA_Web.Controllers
 {
     public class AuthenController : Controller
     {
-        private readonly IUserService _userService;
         private readonly ITokenService _tokenService;
-        private ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public AuthenController(IUserService userService, ITokenService tokenService)
+        public AuthenController(ITokenService tokenService, ApplicationDbContext context)
         {
-            _userService = userService;
             _tokenService = tokenService;
+            _context = context;
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
         }
 
         [HttpPost]
-        public IActionResult Login([FromBody] LoginModel loginModel)
+        public IActionResult Login(LoginModel loginModel)
         {
             if (loginModel is null)
             {
                 return BadRequest("Invalid client request");
             }
-            
+
             // Get user (username, password)
             var user = _context.LoginModels.FirstOrDefault(u =>
                 (u.UserName == loginModel.UserName) && (u.Password == loginModel.Password));
+
+
             if (user is null)
             {
-                return Unauthorized();
+                return NotFound("User not found");
             }
 
             // Generate Token
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, loginModel.UserName),
+                new Claim(ClaimTypes.Name, loginModel.UserName), 
                 new Claim(ClaimTypes.Role, "Manager")
             };
             var accessToken = _tokenService.GenerateAccessToken(claims);
             var refreshToken = _tokenService.GenerateRefreshToken();
 
             user.RefreshToken = refreshToken;
-            user.RefreshTokenExpiryTime = DateTime.Now.AddDays(7);
+            user.RefreshTokenExpiryTime = DateTime.Now.AddSeconds(20);
             
             _context.SaveChanges();
             return Ok(new AuthenticateRespone

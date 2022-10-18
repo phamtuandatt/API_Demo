@@ -26,6 +26,7 @@ builder.Services.AddScoped(typeof(IRepo<>), typeof(Repo<>));
 
 // Add Transient
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<ITokenService, TokenService>();
 
 // Add JWT 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option =>
