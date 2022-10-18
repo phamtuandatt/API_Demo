@@ -25,7 +25,7 @@ namespace OA_Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(LoginModel loginModel)
+        public IActionResult Login([FromBody] LoginModel loginModel)
         {
             if (loginModel is null)
             {
@@ -52,7 +52,7 @@ namespace OA_Web.Controllers
             var refreshToken = _tokenService.GenerateRefreshToken();
 
             user.RefreshToken = refreshToken;
-            user.RefreshTokenExpiryTime = DateTime.Now.AddSeconds(20);
+            user.RefreshTokenExpiryTime = DateTime.Now.AddMinutes(20);
             
             _context.SaveChanges();
             return Ok(new AuthenticateRespone

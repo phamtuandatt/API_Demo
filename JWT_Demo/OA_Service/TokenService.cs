@@ -22,7 +22,7 @@ namespace OA_Service
                 issuer: "https://localhost:7057/",
                 audience: "https://localhost:7057/",
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(1),
+                expires: DateTime.Now.AddDays(5),
                 signingCredentials: signinCredentials
             );
             var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
@@ -52,12 +52,15 @@ namespace OA_Service
                 // Here we are saying that we don't care about the token's expiration date
                 ValidateLifetime = false 
             };
+
             var tokenHandler = new JwtSecurityTokenHandler();
             SecurityToken securityToken;
+
             var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out securityToken);
             var jwtSecurityToken = securityToken as JwtSecurityToken;
             if (jwtSecurityToken == null || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
                 throw new SecurityTokenException("Invalid token");
+
             return principal;
         }
     }
