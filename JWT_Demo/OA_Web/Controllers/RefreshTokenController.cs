@@ -23,15 +23,22 @@ namespace OA_Web.Controllers
         }
 
         [HttpPost]
-        public  IActionResult Refresh(TokenAPI tokenApiModel)
+        // [FromBody] to run with PostMan
+        public  IActionResult Refresh([FromBody] TokenAPI tokenApiModel)
         {
+            if (tokenApiModel is null)
+            {
+                return NotFound("Invalid client request");
+            }
+
             string accessToken = tokenApiModel.AccessToken;
             string refreshToken = tokenApiModel.RefreshToken;
+
             var principal = _tokenService.GetPrincipalFromExpiredToken(accessToken);
             var username = principal.Identity.Name; //this is mapped to the Name claim by default
             var user = _context.LoginModels.SingleOrDefault(u => u.UserName == username);
 
-            if (user is null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.Now)
+            if (user is null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime >= DateTime.Now)
             {
                 return BadRequest("Invalid client request"); 
             }
